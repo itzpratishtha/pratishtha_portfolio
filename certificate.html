@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates - Pratishtha</title>
+    <style>
+        /* Base styles matching the dark theme */
+        :root {
+            --background: #131320;
+            --text: #ffffff;
+            --accent-purple: #9333EA;
+            --accent-purple-light: #A855F7;
+            --accent-yellow: #FFD700;
+            --card-bg: #1E1E30;
+        }
+        
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Certificates section styling */
+        .certificates-section {
+            padding: 4rem 8%;
+        }
+        
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-purple);
+        }
+        
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .certificate-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(147, 51, 234, 0.2);
+        }
+        
+        .certificate-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 2px solid var(--accent-purple);
+        }
+        
+        .certificate-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .certificate-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+        
+        .certificate-issuer {
+            font-size: 0.9rem;
+            color: #A0A0B0;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .certificate-issuer svg {
+            margin-right: 0.5rem;
+            fill: var(--accent-purple-light);
+        }
+        
+        .certificate-date {
+            font-size: 0.85rem;
+            color: #8888A0;
+            margin-top: auto;
+        }
+        
+        .certificate-badge {
+            display: inline-block;
+            background-color: rgba(147, 51, 234, 0.15);
+            color: var(--accent-purple-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .certificate-badges {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        
+        .certificate-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--accent-purple-light);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 1rem;
+            transition: color 0.2s ease;
+        }
+        
+        .certificate-link svg {
+            margin-left: 0.4rem;
+            transition: transform 0.2s ease;
+        }
+        
+        .certificate-link:hover {
+            color: var(--accent-yellow);
+        }
+        
+        .certificate-link:hover svg {
+            transform: translateX(3px);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .certificates-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .certificates-section {
+                padding: 3rem 5%;
+            }
+            
+            .certificates-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 768px) {
+    .container {
+      width: 100%;
+      padding: 0 15px;
+    }
+    
+    .nav-menu {
+      flex-direction: column;
+    }
+  }
+    </style>
+</head>
+<body>
+    <!-- Certificates Section -->
+    <section id="certifications" class="certificates-section">
+        <h2 class="section-title">Certifications</h2>
+        
+        <div class="certificates-grid">
+            <!-- Certificate Card 1 -->
+            <div class="certificate-card">
+                <img src="cert1.jpg" alt="Hackathon Certification" class="certificate-img">
+                <div class="certificate-content">
+                    <h3 class="certificate-title">Project Expo 3.0</h3>
+                    <div class="certificate-issuer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 17l-5-5 1.41-1.41 3.59 3.59 7.59-7.59 1.41 1.41-9 9z"/>
+                        </svg>
+                    Manipal University
+                    </div>
+                    <div class="certificate-badges">
+                        <span class="certificate-badge">IEEE</span>
+                        <span class="certificate-badge">MU</span>
+                       
+                    </div>
+                    <p class="certificate-date">Issued: November 2024</p>
+                    <a href="cert1.jpg" class="certificate-link">
+                        View Certificate
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Certificate Card 2 -->
+            <div class="certificate-card">
+                <img src="cert2.jpg" alt="exhibition Certification" class="certificate-img">
+                <div class="certificate-content">
+                    <h3 class="certificate-title">Udhbhav -2024</h3>
+                    <div class="certificate-issuer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 17l-5-5 1.41-1.41 3.59 3.59 7.59-7.59 1.41 1.41-9 9z"/>
+                        </svg>
+                        Udhbhav Exhibition-2024
+                    </div>
+                    <div class="certificate-badges">
+                        <span class="certificate-badge">AICTE</span>
+                        <span class="certificate-badge">ICC</span>
+                        <span class="certificate-badge">PIET</span>
+                    </div>
+                    <p class="certificate-date">Issued: November 2024</p>
+                    <a href="cert2.jpg" class="certificate-link">
+                        View Certificate
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Certificate Card 3 -->
+            <div class="certificate-card">
+                <img src="cert3.png" alt="completion Certification" class="certificate-img">
+                <div class="certificate-content">
+                    <h3 class="certificate-title">UI/UX Design</h3>
+                    <div class="certificate-issuer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 17l-5-5 1.41-1.41 3.59 3.59 7.59-7.59 1.41 1.41-9 9z"/>
+                        </svg>
+                        UI/UX Design
+                    </div>
+                    <div class="certificate-badges">
+                        <span class="certificate-badge">Grras pvt. ltd.</span>
+                       
+                    </div>
+                    <p class="certificate-date">Issued: March 2025</p>
+                    <a href="cert3.png" class="certificate-link">
+                        View Certificate
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Certificate Card 4 -->
+            <div class="certificate-card">
+                <img src="cert4.png" alt="hackathon Certification" class="certificate-img">
+                <div class="certificate-content">
+                    <h3 class="certificate-title">Build With India </h3>
+                    <div class="certificate-issuer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 17l-5-5 1.41-1.41 3.59 3.59 7.59-7.59 1.41 1.41-9 9z"/>
+                        </svg>
+                        Build With India Hackathon
+                    </div>
+                    <div class="certificate-badges">
+                        <span class="certificate-badge">Google</span>
+                        <span class="certificate-badge">Hack With India</span>
+                        
+                    </div>
+                    <p class="certificate-date">Issued: March 2025</p>
+                    <a href="cert4.png" class="certificate-link">
+                        View Certificate
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- Certificate Card 5 -->
+            <div class="certificate-card">
+                <img src="cert5.jpg" alt="MongoDB Certification" class="certificate-img">
+                <div class="certificate-content">
+                    <h3 class="certificate-title">Effective speaking and listening skills</h3>
+                    <div class="certificate-issuer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 17l-5-5 1.41-1.41 3.59 3.59 7.59-7.59 1.41 1.41-9 9z"/>
+                        </svg>
+                        Effective speaking and listening skills
+                    </div>
+                    <div class="certificate-badges">
+                        <span class="certificate-badge">Wadhwani Foundation</span>
+                        <span class="certificate-badge">Swayam NPTEL</span>
+                        
+                    </div>
+                    <p class="certificate-date">Issued: June 2024</p>
+                    <a href="cert5.jpg" class="certificate-link">
+                        View Certificate
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
